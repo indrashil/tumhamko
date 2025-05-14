@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Event Handling</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 40px;
+			background-color: #f9f9f9;
+		}
+		button, input, select {
+			padding: 10px;
+			margin: 8px 0;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		form {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<button id="btnclick">Click me</button> <br><br>
+
+	<input type="text" id="myInput" placeholder="Type here"><br><br>
+
+	<select id="dropdown">
+		<option value="">Select</option>
+		<option value="one">One</option>
+		<option value="two">Two</option>
+	</select> <br><br>
+
+	<form id="sampleform">
+		<input type="text" name="name" required placeholder="Enter name: ">
+		<button type="submit">Submit</button>
+	</form> <br>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		$('#btnclick').click(function(){
+			alert('Button was clicked!');
+		});
+		
+		$('#myInput').keyup(function(){
+			console.log('You typed: ' + $(this).val());
+		});
+
+		$('#dropdown').change(function () {
+			alert('You selected: ' + $(this).val());
+		});
+
+		$('#sampleform').submit(function (e) {
+			e.preventDefault();
+			alert('Form submitted with name: ' + $('input[name="name"]').val());
+		});
+	});
+	</script>
+
+</body>
+</html>
