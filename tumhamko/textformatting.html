@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title>Text Formatting</title>
+	<style>
+		body {
+			font-family: 'Poppins', sans-serif;
+			margin: 10px;
+			padding: 0;
+			background-color: #f7f7f7;
+		}
+
+		#text {
+			text-align: center;
+			color: gray;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+		}
+		
+		.formatting-container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: white;
+			border-radius: 8px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		}
+		
+		.bold { font-weight: bold; }
+		.italic { font-style: italic; }
+		.underline { text-decoration: underline; }
+		.lowercase { text-transform: lowercase; }
+		.uppercase { text-transform: uppercase; }
+		.strikethrough { text-decoration: line-through; }
+
+		.highlight { 
+			background-color: purple; 
+			color: white;
+			padding: 0 3px;
+		}
+
+		.capitalize { text-transform: capitalize; }
+		.small-caps { font-variant: small-caps; }
+		.letter-spacing { letter-spacing: 3px; }
+		.align-left { text-align: left; }
+		.align-right { text-align: right; }
+		.align-center { text-align: center; }
+
+		.justify { 
+			text-align: justify;
+			max-width: 500px;
+		}
+
+		.font-example { font-family: 'Times New Roman', serif; }
+		.text-shadow { 
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+			font-size: 1.2em;
+		}
+		
+		p {
+			margin: 10px 0;
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 id="text">Text Formatting Examples</h1>
+	<div class="formatting-container">
+		<p class="bold">This text is bold</p>
+		<p class="italic">This text is italic</p>
+		<p class="underline">This text is underlined</p>
+		<p class="strikethrough">This text has strikethrough</p>
+		<p class="highlight">This text is highlighted</p>
+		<p class="uppercase">This text is uppercase</p>
+		<p class="lowercase">THIS TEXT IS LOWERCASE</p>
+		<p class="capitalize">this text is capitalized</p>
+		<p class="small-caps">This text is in small-caps</p>
+		<p class="letter-spacing">This text has letter spacing</p>
+		<p class="align-left">This text is left-aligned</p>	
+		<p class="align-right">This text is right-aligned</p>
+		<p class="align-center">This text is center-aligned</p>
+		<p class="justify">This text is justified. Hello everyone, my name is Karan Kumar Bind. I'm a B.Tech student pursuing my degree in Computer Science. This example demonstrates how justified text aligns with both the left and right margins.</p>
+		<p class="font-example">This text uses Times New Roman font</p>
+		<p class="text-shadow">This text has a shadow effect</p>
+	</div>
+</body>
+</html>

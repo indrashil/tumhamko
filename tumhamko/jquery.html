@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple jQuery Events</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .box, .item { margin: 10px 0; padding: 10px; border: 1px solid #ccc; cursor: pointer; }
+    .highlight { background-color: yellow; }
+  </style>
+</head>
+<body>
+  <h2>Click Event</h2>
+  <button id="clickBtn">Click Me</button>
+
+  <h2>Mouse Events</h2>
+  <div class="box" id="hoverBox">Hover or Click</div>
+
+  <h2>Dynamic Items</h2>
+  <button id="addItem">Add Item</button>
+  <div id="items">
+    <div class="item">Item 1</div>
+  </div>
+
+  <h2>Input Event</h2>
+  <input type="text" id="name" placeholder="Enter name">
+  <p id="greeting"></p>
+
+  <h2>One-Time Click</h2>
+  <button id="onceBtn">Click Once</button>
+
+  <script>
+    $(function() {
+      // Click event
+      $('#clickBtn').click(() => alert('Clicked!'));
+
+      // Mouse events
+      $('#hoverBox').on('mouseenter mouseleave', function(e) {
+        $(this).toggleClass('highlight', e.type === 'mouseenter');
+      }).click(() => alert('Box clicked'));
+
+      // Event delegation
+      $('#items').on('click', '.item', function() {
+        $(this).css('background', '#cff');
+      });
+
+      $('#addItem').click(() => {
+        const count = $('.item').length + 1;
+        $('#items').append(`<div class="item">Item ${count}</div>`);
+      });
+
+      // Input event
+      $('#name').on('input', function() {
+        $('#greeting').text('Hello, ' + $(this).val());
+      });
+
+      // One-time event
+      $('#onceBtn').one('click', function() {
+        alert('Only once!');
+        $(this).text('Clicked').prop('disabled', true);
+      });
+    });
+  </script>
+</body>
+</html>

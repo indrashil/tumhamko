@@ -1,0 +1,157 @@
+<html>
+<head>
+	<title>Basis Image Properties </title>
+	<style>
+		body{
+			margin:20px;
+			padding:20px;
+			font-family:poppins;
+			background-color:gray;
+}
+
+		.container{
+			width:1000px;
+			margin:0 auto;
+}
+		h1{
+			text-align:center;
+			color:#333;
+			font-size:40px;
+}
+		.example {
+			margin-bottom: 40px;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			background-color: #f9f9f9;
+}
+
+		.example h2 {
+			margin-top: 0;
+			color: #444;
+}
+
+		.bg-basic {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-size: cover;
+			padding: 20px;
+			color: white;
+}
+		.bg-repeat {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-repeat:repeat;
+			padding: 20px;
+			color: white;
+}
+		.bg-no-repeat {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-repeat:no-repeat;
+			padding: 20px;
+			color: white;
+}
+		.bg-size-cover {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-size:cover;
+			padding: 20px;
+			color: white;
+}
+
+		.bg-size-contain {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-size:contain;
+			padding: 20px;
+			color: white;
+}
+
+		.bg-size-100 {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-size:100% 100%;
+			padding: 20px;
+			color: white;
+}
+
+		.bg-position {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-position:center;
+			padding: 20px;
+			color: white;
+}
+
+		.bg-fixed {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-size:cover;
+			background-attachment:fixed;
+			background-position:center;
+			padding: 20px;
+			color: white;
+}
+
+		.bg-scroll {
+			background-image: url('https://i.pinimg.com/736x/af/ae/35/afae3501f8aa4b57fffe2c177af89dc6.jpg');
+			height: 300px;
+			background-size:cover;
+			background-attachment:scroll;
+			background-position:center;
+			padding: 20px;
+			color: white;
+}
+
+	</style>
+</head>
+<body>
+	<h1>Basic Image Properties </h1>
+	<div class="container"> 
+		<div class="example">
+			<h2>Basic Image </h2>
+			<p> This is a background image </p>
+			<div class="bg-basic"></div>
+		</div>
+		
+		<div class="example">
+			<h2>Background Repeat </h2>
+			<p> <strong>Background-repeat : repeat </strong> </p>  
+			<div class="bg-repeat"></div>
+
+			<p> <strong>Background-repeat : no-repeat </strong> </p>  
+			<div class="bg-no-repeat"></div>
+		</div>
+
+		<div class="example">
+			<h2>Background Size </h2>
+			<p> <strong> Background-size : cover </strong> </p>
+			<div class="bg-size-cover"></div>
+
+			<p> <strong> Background-size : contain </strong> </p>
+			<div class="bg-size-contain"></div>
+
+			<p> <strong> Background-size : 100% 100% </strong> </p>
+			<div class="bg-size-100"></div>
+		</div>
+
+		<div class="example">
+			<h2>Background Position </h2>
+			<p> <strong> Background-position : center </strong> </p>
+			<div class="bg-position"></div>
+		</div>
+
+		<div class="example">
+			<h2>Background Attachment </h2>
+			<p> <strong> Background-attachement : fixed </strong> </p>
+			<div class="bg-fixed"></div>
+
+			<p> <strong> Background-attachement : scroll </strong> </p>
+			<div class="bg-scroll"></div>
+		</div>
+	</div>
+</body>
+</html>
+
+
